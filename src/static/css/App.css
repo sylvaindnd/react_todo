@@ -1,0 +1,34 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+.app{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    min-height: 100vh;
+
+    padding: 60px 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul.tasks{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+ul.tasks li{
+    border-color: rgb(189, 189, 189)!important;
+    box-sizing: border-box;
+}
+
+ul.tasks li .task-done{
+    color: var(--bs-danger);
+    text-decoration: line-through;
+    font-style: italic;
+}
