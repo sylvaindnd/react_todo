@@ -27,8 +27,12 @@ ul.tasks li{
     box-sizing: border-box;
 }
 
-ul.tasks li .task-done{
+ul.tasks li .task-done-true{
     color: var(--bs-danger);
     text-decoration: line-through;
     font-style: italic;
+}
+
+ul.tasks li[data-delete=true]{
+    display: none!important;
 }

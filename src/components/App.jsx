@@ -8,7 +8,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            totalTasks: 0,
+            totalTasks: -1,
             tasks: []
         }
     }
@@ -16,7 +16,7 @@ class App extends React.Component {
     addTask(event){
         const input = document.getElementById('todo-input');
         const taskName = input.value;
-        const taskIndex = this.state.totalTasks;
+        const taskIndex = this.state.totalTasks + 1;
 
         if(!taskName.length){
             return;
@@ -29,7 +29,8 @@ class App extends React.Component {
         });
 
         this.setState({
-            tasks: newList
+            tasks: newList,
+            totalTasks: taskIndex
         })
 
         input.value = '';
